@@ -66,6 +66,14 @@ To build AOSP on 9810 devices, you must prepare:
      repo init -u https://github.com/PixelExperience/manifest -b thirteen
     ```
 
++ Cloning devices trees:
+  - For 9810: you may have a look into our organization for all trees at here: https://github.com/SamsungExynos9810
+  - Tip: https://github.com/SamsungExynos9810/local_manifests (All trees that we used to build is at here)
+ ```bash
+    while in rom folder do
+    git clone https://github.com/SamsungExynos9810/local_manifests .repo/local_manifests
+ ```
+
   - Then download all the sources:
     ```bash
      repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
@@ -73,10 +81,6 @@ To build AOSP on 9810 devices, you must prepare:
 
   - Now wait!
 
-+ Cloning devices trees:
-  - For 9810: you may have a look into our organization for all trees at here: https://github.com/SamsungExynos9810
-  - Tip: https://github.com/SamsungExynos9810/local_manifests (All trees that we used to build is at here)
- 
 + Modifying the trees for ROMs:
   - There are 3 files that you need to edit here: romname_device.mk, romname.dependencies, AndroidProducts.mk.
   - So how to modify it to build the ROM you want?
