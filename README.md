@@ -20,47 +20,56 @@ To build AOSP on 9810 devices, you must prepare:
   - This should copy all the scripts into /home/username/scripts
   
   - Then we need to navigate into that folder by doing this:
-
+     ```bash
      cd scripts/setup
-  
+     ```
   - Then we need to lists out the directory:
-
+     ```bash
      ls
-  
+     ```
+
   - Find the file that corresponds to our Linux build. Since we are using Ubuntu it will be android_build_env.sh.
     For other Distros refer to the readme that has also been cloned.
  
   - Run the scripts: 
-
+    ```bash
      . android_build_env.sh
-  
-+ After all of the scripts are synced, we will need to setup Github by doing this:
+    ```
 
++ After all of the scripts are synced, we will need to setup Github by doing this:
+    ```bash
      git config --global user.name "your name"
      git config --global user.email "youremail@example"
-  
+    ```
+
 + Syncing the sources
   - This is one of the worse step, you have to wait for a long time, depends on your network xD
   - Check the ROM you want to build, then we will make a directory for the sources
     (at here, I'll take PixelExperience for an example, you can change the name of the directory as you like):
-    
-     mkdir "ROMNAME" (example: mkdir pexp)
+    ```bash
+     mkdir "ROMNAME"
+      (example: mkdir pexp)
+    ```
 
   - Then we will navigate to that directory:
+    ```bash
+     cd "ROMNAME" 
+     (example: cd pexp)
+    ```
 
-     cd "ROMNAME" (example: cd pexp)
-  
   - You will have to check the command line to sync all the sources by looking on their Github.
     Usually The repository initiation command can be found on the GitHub page in manifest repo,
     then scroll down to repo initialisation and copy command.
   
   - It should look like this: 
-    
+    ```bash
      repo init -u https://github.com/PixelExperience/manifest -b thirteen
-  
-  - Then download all the sources:
+    ```
 
+  - Then download all the sources:
+    ```bash
      repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+    ```
 
   - Now wait!
 
@@ -83,6 +92,7 @@ To build AOSP on 9810 devices, you must prepare:
   - Now return to your rom repo, resync.
 
 3. Build
+    ```bash
    # Set up environment
      . build/envsetup.sh
 
@@ -92,3 +102,4 @@ To build AOSP on 9810 devices, you must prepare:
    # Build the code
      mka bacon  
    (check ROM manifest on github for exact commands)      
+    ```
