@@ -1,5 +1,6 @@
 ## Welcome to 9810 AOSP Building guide!
-## All of the Instructions lines are from my experience while building AOSP for 9810 devices. If I messed something up below, please send me a message for me to fix.
+## All of the Instructions lines are from my experience while building AOSP for 9810 devices.
+   If I messed something up below, please send me a message with what is to fix.
 
 1. Requirements
 To build AOSP on 9810 devices, you must prepare:
