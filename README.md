@@ -69,10 +69,10 @@ To build AOSP on 9810 devices, you must prepare:
 
 + Cloning devices trees:
   - For 9810: you may have a look into our organization for all trees at here: https://github.com/SamsungExynos9810
-  - Tip: https://github.com/SamsungExynos9810/local_manifests (All trees that we used to build is at here)
+  - Tip: https://github.com/SamsungExynos9810/local_manifests-v2 (All trees that we used to build is at here)
  ```bash
     while in rom folder do
-    git clone https://github.com/SamsungExynos9810/local_manifests .repo/local_manifests
+    git clone https://github.com/SamsungExynos9810/local_manifests-v2 .repo/local_manifests
  ```
 
   - Then download all the sources:
